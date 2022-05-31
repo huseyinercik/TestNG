@@ -2,7 +2,7 @@ package tests.day18_pom;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.FacebookPage;
+import pages.FacebookPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -23,7 +23,6 @@ public class C03_ConfigReaderKullanimi {
         facebookPage.kullaniciSifre.sendKeys(ConfigReader.getProperty("fbWrongPassword"));
         // login butonuna basin
         facebookPage.login.click();
-        // giris yapilamadigini test edin
         Assert.assertTrue(facebookPage.girilemediYaziElementi.isDisplayed());
 
         Driver.closeDriver();
