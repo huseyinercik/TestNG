@@ -26,13 +26,14 @@ public class Q4_Alert_DependsOn extends TestBase {
   // 8. alert1'e göre dependsOnMethods kullanın
 */
     @Test
-    public void alert1(){
+    public void alert1() throws InterruptedException {
         Driver.getDriver().get("http://webdriveruniversity.com/Popup-Alerts/index.html");
         WebDriverUniversityPage wdup = new WebDriverUniversityPage();
         wdup.javaScriptAlert.click();
         String actualMessage = Driver.getDriver().switchTo().alert().getText();
         String expectedMessage ="I am an alert box!";
         Assert.assertEquals(actualMessage, expectedMessage);
+        Thread.sleep(5000);
         Driver.getDriver().switchTo().alert().accept();
     }
     @Test(dependsOnMethods="alert1")

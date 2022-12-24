@@ -8,6 +8,8 @@ import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.util.List;
+
 public class C03_DataProvider {
 
 
@@ -32,6 +34,7 @@ public class C03_DataProvider {
         Object[][]arananKelimeArrayi={{"Nutella"}, {"Java"}, {"cigdem"}, {"Netherlands"}};
         return arananKelimeArrayi;
     }
+
 
     @Test(dataProvider = "AranacakKelimeler")
     //arayacagimiz kelimeleri bir liste gibi tutup
